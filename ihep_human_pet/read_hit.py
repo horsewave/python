@@ -163,7 +163,7 @@ def get_time_diff_hits(path_file_ascii,cut_count_threshold=5):
     # print(se_hist_tof)
     return se_hist_tof
 
-def get_time_diff_coincidences(path_file_ascii,cut_count_threshold=10):
+def get_time_diff_coincidences_single_cpu(path_file_ascii,cut_count_threshold=10):
     """read the GATE simulated coincidence data which is in ascii format into pandas dateframe, and get the event counts for different TOF bins
 
     Arguments:
@@ -176,8 +176,8 @@ def get_time_diff_coincidences(path_file_ascii,cut_count_threshold=10):
         [pandas.Series] -- [a series data whose index is the time difference in picoseconds and the value is the sum of the hit counts falling in this time diff. ]
     """
     df_coincidence = pd.read_table(
-        # path_file_ascii, delim_whitespace=True,  header=None,nrows=10000)
-        path_file_ascii, delim_whitespace=True,  header=None)
+        path_file_ascii, delim_whitespace=True,  header=None,nrows=100000)
+        # path_file_ascii, delim_whitespace=True,  header=None)
     
     """1:generate a new line for the time difference in picoseconds.
        2: use iloc to slice the dateframe. This took me more than 20 mins. 
@@ -195,12 +195,9 @@ def get_time_diff_coincidences(path_file_ascii,cut_count_threshold=10):
     se_hist_tof=df_coincidence['time_diff'].value_counts()
     # #remove rows whose counts smaller than cut_count_threshold
     se_hist_tof=(se_hist_tof[se_hist_tof[:]>cut_count_threshold]).sort_index()
-    print(se_hist_tof)
+    # print(se_hist_tof)
     return se_hist_tof
 
-#
-# 
-# def get_peak_fwhm(se_hist_tof,path_save_img):
 def get_peak_fwhm(se_hist_tof):
     """get the fwhm of a peak
 
@@ -286,7 +283,23 @@ def draw_peak(li_curve_data,li_peak_fwhm_pos,li_curve_name,path_save_img):
     plt.savefig(path_save_img)
     plt.show()
 
-def main_coincidence_process():
+
+def get_time_diff_coincidences_multi_cpu(path_base_name,file_suffix='Coincidences.dat',file_number=5):
+    # path_base_name='/home/mabo/software/data/gate/ihep_human_tof_pet_sz/ihep_cluster/point_source/diff_cry_length/human_szpet_point_source_central_single_slice_cry_len_2mm_ew_50kev_tof_0ps_'
+    file_suffix='Coincidences.dat'
+    # file_number=3
+    se_hist_tof=pd.Series()
+    
+    for i in range(1,file_number+1):
+            path_full=path_base_name+str(i)+file_suffix
+            se_hist_temp=get_time_diff_coincidences_single_cpu(path_full)
+            se_hist_tof=se_hist_tof.radd(se_hist_temp,fill_value=0)
+            # se_hist_tof.add(se_hist_temp,fill_value=0)
+            # print('the sum after is \n')
+            # print(se_hist_tof[-5:5])
+    return se_hist_tof
+    
+def main_coincidence_process_single_cpu():
     """this is the main function for displaying the EVENT distributions for different TOF for multiple input files to compare
        1: there are three fields needed to fill: 
          1) the original path for the GATE simulated coincidence data which is in ASCII format; 
@@ -308,14 +321,58 @@ def main_coincidence_process():
     li_curve_data=[]
     li_peak_fwhm_pos=[]
     for i in range(0,len(li_file_path)):
-        se_hist_tof = get_time_diff_coincidences(li_file_path[i])
+        se_hist_tof = get_time_diff_coincidences_single_cpu(li_file_path[i])
         peak_fwhm_pos=get_peak_fwhm(se_hist_tof)
         
         li_curve_data.append(se_hist_tof)
         li_peak_fwhm_pos.append(peak_fwhm_pos)
     
     draw_peak(li_curve_data,li_peak_fwhm_pos,li_curve_name,path_saved_img_coin)
- 
+
+def main_coincidence_process_multi_cpu():
+    """this is the main function for displaying the EVENT distributions for different TOF for multiple input files to compare
+       1: there are three fields needed to fill: 
+         1) the original path for the GATE simulated coincidence data which is in ASCII format; 
+         2) the name for each curve which will show in the legend; 
+         3) the path to save the image.
+    
+    """
+    li_file_path=[]
+    li_curve_name=[]
+    li_cpu_num=[]
+    li_file_path.append('/home/mabo/software/data/gate/ihep_human_tof_pet_sz/ihep_cluster/point_source/diff_cry_length/human_szpet_point_source_central_single_slice_cry_len_2mm_ew_50kev_tof_0ps_')
+    li_curve_name.append('cry_len_2mm_tof_0ps')
+    li_cpu_num.append(5)
+    
+    li_file_path.append('/home/mabo/software/data/gate/ihep_human_tof_pet_sz/ihep_cluster/point_source/diff_cry_length/human_szpet_point_source_central_single_slice_cry_len_3.6mm_ew_50kev_tof_0ps_')
+    li_curve_name.append('cry_len_3.6mm_tof_0ps')
+    li_cpu_num.append(5)
+    
+    li_file_path.append('/home/mabo/software/data/gate/ihep_human_tof_pet_sz/ihep_cluster/point_source/diff_cry_length/human_szpet_point_source_central_single_slice_cry_len_5mm_ew_50kev_tof_0ps_')
+    li_curve_name.append('cry_len_5mm_tof_0ps')
+    li_cpu_num.append(5)
+    
+    li_file_path.append('/home/mabo/software/data/gate/ihep_human_tof_pet_sz/ihep_cluster/point_source/diff_cry_length/human_szpet_point_source_central_single_slice_cry_len_10mm_ew_50kev_tof_0ps_')
+    li_curve_name.append('cry_len_10mm_tof_0ps') 
+    li_cpu_num.append(5)
+    
+    li_file_path.append('/home/mabo/software/data/gate/ihep_human_tof_pet_sz/ihep_cluster/point_source/diff_cry_length/human_szpet_point_source_central_single_slice_cry_len_20mm_ew_50kev_tof_0ps_')
+    li_curve_name.append('cry_len_20mm_tof_0ps')
+    li_cpu_num.append(5)
+    
+    path_saved_img_coin ='/home/mabo/software/data/gate/ihep_human_tof_pet_sz/ihep_cluster/point_source/diff_cry_length/Coincidences_tof_saved_img.jpg'
+    
+    li_curve_data=[]
+    li_peak_fwhm_pos=[]
+    for i in range(0,len(li_file_path)):
+        se_hist_tof = get_time_diff_coincidences_multi_cpu(li_file_path[i],file_number=li_cpu_num[i])
+        peak_fwhm_pos=get_peak_fwhm(se_hist_tof)
+        
+        li_curve_data.append(se_hist_tof)
+        li_peak_fwhm_pos.append(peak_fwhm_pos)
+    
+    draw_peak(li_curve_data,li_peak_fwhm_pos,li_curve_name,path_saved_img_coin) 
+
 def main_hit_process():
     """this is the main function for displaying the EVENT distributions for different TOF for multiple input files to compare
        1: there are four fields needed to fill: 
@@ -357,8 +414,10 @@ if __name__ == '__main__':
 
     
     # main_coincidence_process()
-   main_hit_process() 
+    # main_hit_process() 
+    # read_multi_ascii_file_coin()
+    main_coincidence_process_multi_cpu()
 
         
     
-    
+    # series_add_test()

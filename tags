@@ -1,0 +1,50 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Example3	ihep_human_pet/backup/test.py	/^class Example3(object):$/;"	c
+__init__	ihep_human_pet/backup/test.py	/^    def __init__(self, bar):$/;"	m	class:Example3
+blue	ihep_human_pet/test.py	/^blue = green + pink$/;"	v
+draw_peak	ihep_human_pet/read_hit.py	/^def draw_peak(li_curve_data,li_peak_fwhm_pos,li_curve_name,path_save_img):$/;"	f
+dst	img-operation/img_pixel_inverse.py	/^dst = 255 - gray$/;"	v
+example1	ihep_human_pet/backup/test.py	/^def example1():$/;"	f
+example2	ihep_human_pet/backup/test.py	/^def example2(): return ('' in {'f': 2}) in {'has_key() is deprecated': True}$/;"	f
+get_peak_fwhm	ihep_human_pet/read_hit.py	/^def get_peak_fwhm(se_hist_tof):$/;"	f
+get_time_diff_coincidences_multi_cpu	ihep_human_pet/read_hit.py	/^def get_time_diff_coincidences_multi_cpu(path_base_name,file_suffix='Coincidences.dat',file_number=5):$/;"	f
+get_time_diff_coincidences_single_cpu	ihep_human_pet/read_hit.py	/^def get_time_diff_coincidences_single_cpu(path_file_ascii,cut_count_threshold=10):$/;"	f
+get_time_diff_hits	ihep_human_pet/read_hit.py	/^def get_time_diff_hits(path_file_ascii,cut_count_threshold=5):$/;"	f
+gray	img-operation/img_pixel_inverse.py	/^gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)$/;"	v
+green	ihep_human_pet/test.py	/^green = make_norm_dist(x, 50, 10)$/;"	v
+h	img-operation/img_pixel_inverse.py	/^h = img_shape[0]$/;"	v
+img	img-operation/img_pixel_inverse.py	/^img = cv2.imread('\/home\/mabo\/Pictures\/my-pic.png', 1)$/;"	v
+img_shape	img-operation/img_pixel_inverse.py	/^img_shape = img.shape  # 图像大小(565, 650, 3)$/;"	v
+list_time_diff	ihep_human_pet/backup/read_ascii_file.py	/^    list_time_diff = []$/;"	v
+list_time_diff	ihep_human_pet/read_ascii_file.py	/^    list_time_diff = []$/;"	v
+lor_to_sino	run-mcs/run-mcs.py	/^def lor_to_sino():$/;"	f
+main_coincidence_process_multi_cpu	ihep_human_pet/read_hit.py	/^def main_coincidence_process_multi_cpu():$/;"	f
+main_coincidence_process_single_cpu	ihep_human_pet/read_hit.py	/^def main_coincidence_process_single_cpu():$/;"	f
+main_hit_process	ihep_human_pet/read_hit.py	/^def main_hit_process():$/;"	f
+make_norm_dist	ihep_human_pet/test.py	/^def make_norm_dist(x, mean, sd):$/;"	f
+matrix	deep_learning_study/python_machine_learning/numpy_1.py	/^matrix = numpy.array([[5,10,15],[20,25,30],[35,40,45]])$/;"	v
+merge_sion	run-mcs/run-mcs.py	/^def merge_sion():$/;"	f
+path_file_ascii	ihep_human_pet/backup/read_ascii_file.py	/^    path_file_ascii = '\/home\/mabo\/software\/data\/gate\/ihep_human_tof_pet_sz\/ihep_cluster\/cyl_sphere_activ_ration_1to4_tof_30ps\/human_szpet_cyl_to_sphere_1to4_source_tof_30ps_1Coincidences.dat'$/;"	v
+path_file_ascii	ihep_human_pet/read_ascii_file.py	/^    path_file_ascii = '\/home\/mabo\/software\/data\/gate\/ihep_human_tof_pet_sz\/ihep_cluster\/cyl_sphere_activ_ration_1to4_tof_30ps\/human_szpet_cyl_to_sphere_1to4_source_tof_30ps_1Coincidences.dat'$/;"	v
+path_file_ascii_hit	ihep_human_pet/backup/read_hit.py	/^    path_file_ascii_hit = '\/home\/mabo\/software\/src\/gate\/gate_macros\/ihep_human_tof_pet_sz\/results\/test_hits.dat'$/;"	v
+path_file_ascii_saved	ihep_human_pet/backup/read_hit.py	/^    path_file_ascii_saved = '\/home\/mabo\/software\/src\/gate\/gate_macros\/ihep_human_tof_pet_sz\/results\/test_hits_true.dat'$/;"	v
+pink	ihep_human_pet/test.py	/^pink = make_norm_dist(x, 60, 10)$/;"	v
+read_ascii_file	ihep_human_pet/backup/read_ascii_file.py	/^def read_ascii_file(path_file_ascii, list_time_diff):$/;"	f
+read_ascii_file	ihep_human_pet/read_ascii_file.py	/^def read_ascii_file(path_file_ascii, list_time_diff):$/;"	f
+read_ascii_file_coin	ihep_human_pet/backup/read_hit.py	/^def read_ascii_file_coin(path_file_ascii, list_time_diff):$/;"	f
+read_ascii_file_coin	ihep_human_pet/read_hit.py	/^def read_ascii_file_coin(path_file_ascii):$/;"	f
+read_ascii_file_hit	ihep_human_pet/backup/read_hit.py	/^def read_ascii_file_hit(path_file_ascii, path_saved_ascii):$/;"	f
+read_ascii_file_hit	ihep_human_pet/read_hit.py	/^def read_ascii_file_hit(path_file_ascii, path_saved_ascii):$/;"	f
+rename_file	change-batch-file-names/change_batch_file_names.py	/^def rename_file():$/;"	f
+run_mcs_python	run-mcs/run-mcs.py	/^def run_mcs_python():$/;"	f
+spline	ihep_human_pet/test.py	/^spline = UnivariateSpline(x, blue-np.max(blue)\/2, s=0)$/;"	v
+str_replace_sym	change-batch-file-names/change_batch_file_names.py	/^def str_replace_sym(old_string,old_sym,new_sym):$/;"	f
+vector	deep_learning_study/python_machine_learning/numpy_1.py	/^vector = numpy.array([5,10,15,20])$/;"	v
+w	img-operation/img_pixel_inverse.py	/^w = img_shape[1]$/;"	v
+world_alcohol	deep_learning_study/python_machine_learning/numpy_1.py	/^world_alcohol = numpy.genfromtxt(".\/numpy_docs\/world_alcohol.txt",delimiter=",", dtype=str)$/;"	v
+x	ihep_human_pet/test.py	/^x = np.linspace(10, 110, 1000)$/;"	v

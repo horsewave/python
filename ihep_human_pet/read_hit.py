@@ -309,14 +309,17 @@ def main_coincidence_process_single_cpu():
     """
     li_file_path=[]
     li_curve_name=[]
-    li_file_path.append('/home/mabo/software/data/gate/ihep_human_tof_pet_sz/ihep_cluster/point_source/diff_cry_length/human_szpet_point_source_central_single_slice_cry_len_20mm_ew_50kev_tof_30ps_1Coincidences.dat')
-    li_curve_name.append('cry_len_20mm_tof_30ps')
+    li_file_path.append('/home/mabo/software/data/gate/ihep_human_tof_pet_sz/ihep_cluster/point_source/diff_cry_length/human_szpet_point_source_central_single_slice_cry_len_10mm_ew_50kev_tof_0ps_1Coincidences.dat')
+    li_curve_name.append('cry_len_10mm_tof_0ps')
     
-    li_file_path.append('/home/mabo/software/data/gate/ihep_human_tof_pet_sz/ihep_cluster/point_source/diff_cry_length/human_szpet_point_source_central_single_slice_cry_len_3.6mm_ew_50kev_tof_30ps_1Coincidences.dat')
-    li_curve_name.append('cry_len_3.6mm_tof_30ps')
+    li_file_path.append('/home/mabo/software/data/gate/ihep_human_tof_pet_sz/ihep_cluster/point_source/diff_cry_length/human_szpet_point_source_central_single_slice_cry_len_10mm_ew_50kev_tof_10ps_1Coincidences.dat')
+    li_curve_name.append('cry_len_10mm_tof_10ps')
+    
+    li_file_path.append('/home/mabo/software/data/gate/ihep_human_tof_pet_sz/ihep_cluster/point_source/diff_cry_length/human_szpet_point_source_central_single_slice_cry_len_10mm_ew_50kev_tof_20ps_1Coincidences.dat')
+    li_curve_name.append('cry_len_10mm_tof_20ps')
     
     
-    path_saved_img_coin ='/home/mabo/software/data/gate/ihep_human_tof_pet_sz/ihep_cluster/point_source/diff_cry_length/Coincidences_tof_saved_img.jpg'
+    path_saved_img_coin ='/home/mabo/software/data/gate/ihep_human_tof_pet_sz/ihep_cluster/point_source/diff_cry_length/Coincidences_tof_saved_cry_len_10mm_img.jpg'
     
     li_curve_data=[]
     li_peak_fwhm_pos=[]
@@ -416,7 +419,8 @@ if __name__ == '__main__':
     # main_coincidence_process()
     # main_hit_process() 
     # read_multi_ascii_file_coin()
-    main_coincidence_process_multi_cpu()
+    main_coincidence_process_single_cpu() 
+   # main_coincidence_process_multi_cpu()
 
         
     

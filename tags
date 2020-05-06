@@ -4,13 +4,51 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+DerenzoPhantom	derenzo_phantom/Geant4-temp/phantom.py	/^class DerenzoPhantom(object):$/;"	c
+DerenzoPhantom	derenzo_phantom/phantom.py	/^class DerenzoPhantom(object):$/;"	c
+DerenzoSection	derenzo_phantom/Geant4-temp/phantom.py	/^class DerenzoSection(object):$/;"	c
+DerenzoSection	derenzo_phantom/phantom.py	/^class DerenzoSection(object):$/;"	c
 Example3	ihep_human_pet/backup/test.py	/^class Example3(object):$/;"	c
+R	derenzo_phantom/Geant4-temp/derenzo_log.py	/^    R = 50.0$/;"	v
+R	derenzo_phantom/derenzo_log.py	/^    R = 50.0$/;"	v
+__init__	derenzo_phantom/Geant4-temp/phantom.py	/^    def __init__(self, phantom_radius, well_separation, section_offset=0.1):$/;"	m	class:DerenzoSection
+__init__	derenzo_phantom/Geant4-temp/phantom.py	/^    def __init__(self, radius, well_separations, cyl_height=0, unit="mm"):$/;"	m	class:DerenzoPhantom
+__init__	derenzo_phantom/phantom.py	/^    def __init__(self, phantom_radius, well_separation, section_offset=0.1):$/;"	m	class:DerenzoSection
+__init__	derenzo_phantom/phantom.py	/^    def __init__(self, radius, well_separations, cyl_height=0, unit="mm"):$/;"	m	class:DerenzoPhantom
 __init__	ihep_human_pet/backup/test.py	/^    def __init__(self, bar):$/;"	m	class:Example3
+_num_sections	derenzo_phantom/Geant4-temp/phantom.py	/^    _num_sections = 6$/;"	v	class:DerenzoPhantom
+_num_sections	derenzo_phantom/phantom.py	/^    _num_sections = 6$/;"	v	class:DerenzoPhantom
+activity	derenzo_phantom/phantom.py	/^    activity = 100$/;"	v	class:DerenzoSection
+apply_rotation	derenzo_phantom/Geant4-temp/phantom.py	/^    def apply_rotation(self, deg):$/;"	m	class:DerenzoSection
+apply_rotation	derenzo_phantom/phantom.py	/^    def apply_rotation(self, deg):$/;"	m	class:DerenzoSection
+area	derenzo_phantom/Geant4-temp/phantom.py	/^    def area(self):$/;"	m	class:DerenzoPhantom
+area	derenzo_phantom/phantom.py	/^    def area(self):$/;"	m	class:DerenzoPhantom
+ax	derenzo_phantom/Geant4-temp/derenzo_log.py	/^    ax = fig.add_axes([0.1, 0.1, 0.8, 0.8])$/;"	v
+ax	derenzo_phantom/derenzo_log.py	/^    ax = fig.add_axes([0.1, 0.1, 0.8, 0.8])$/;"	v
 blue	ihep_human_pet/test.py	/^blue = green + pink$/;"	v
+compute_number_of_rows	derenzo_phantom/Geant4-temp/derenzo_log.py	/^def compute_number_of_rows(R, well_sep, section_offset):$/;"	f
+compute_number_of_rows	derenzo_phantom/derenzo_log.py	/^def compute_number_of_rows(R, well_sep, section_offset):$/;"	f
+cyl	derenzo_phantom/Geant4-temp/derenzo_log.py	/^                cyl = mpp.Circle(xy, radius=r, color="green", alpha=0.5)$/;"	v
+cyl	derenzo_phantom/derenzo_log.py	/^                cyl = mpp.Circle(xy, radius=r, color="green", alpha=0.5)$/;"	v
+cyl_height	derenzo_phantom/Geant4-temp/derenzo_log.py	/^    cyl_height = 10.0$/;"	v
+cyl_height	derenzo_phantom/derenzo_log.py	/^    cyl_height = 10.0$/;"	v
+cyl_height	derenzo_phantom/phantom.py	/^    cyl_height = 20$/;"	v	class:DerenzoSection
+derenzo_cyl	derenzo_phantom/Geant4-temp/derenzo_log.py	/^    derenzo_cyl = mpp.Circle((0, 0), radius=R, color="gray", alpha=0.3)$/;"	v
+derenzo_cyl	derenzo_phantom/derenzo_log.py	/^    derenzo_cyl = mpp.Circle((0, 0), radius=R, color="gray", alpha=0.3)$/;"	v
 draw_peak	ihep_human_pet/read_hit.py	/^def draw_peak(li_curve_data,li_peak_fwhm_pos,li_curve_name,path_save_img):$/;"	f
 dst	img-operation/img_pixel_inverse.py	/^dst = 255 - gray$/;"	v
 example1	ihep_human_pet/backup/test.py	/^def example1():$/;"	f
 example2	ihep_human_pet/backup/test.py	/^def example2(): return ('' in {'f': 2}) in {'has_key() is deprecated': True}$/;"	f
+export_to_G4gps_macro	derenzo_phantom/Geant4-temp/phantom.py	/^    def export_to_G4gps_macro(self, fname, num_events, gamma_en,$/;"	m	class:DerenzoPhantom
+export_to_G4gps_macro	derenzo_phantom/phantom.py	/^    def export_to_G4gps_macro(self, fname, num_events, gamma_en, source_name, activity,$/;"	m	class:DerenzoPhantom
+export_to_G4mac	derenzo_phantom/Geant4-temp/derenzo_log.py	/^def export_to_G4mac(filehandle, x, y, z, r, energy, num_evs, halfz=None):$/;"	f
+export_to_G4mac	derenzo_phantom/derenzo_log.py	/^def export_to_G4mac(filehandle, x, y, z, r, energy, num_evs, source_name, activity, halfz=None):$/;"	f
+feature_sizes	derenzo_phantom/Geant4-temp/derenzo_log.py	/^    feature_sizes = (10.0, 8.0, 6.0, 4.0, 2.0, 1.0) # Must have 6 entries$/;"	v
+feature_sizes	derenzo_phantom/derenzo_log.py	/^    feature_sizes = (10.0, 8.0, 6.0, 4.0, 2.0, 1.0)  # Must have 6 entries$/;"	v
+fig	derenzo_phantom/Geant4-temp/derenzo_log.py	/^    fig = plt.figure(figsize=(6, 6))$/;"	v
+fig	derenzo_phantom/derenzo_log.py	/^    fig = plt.figure(figsize=(6, 6))$/;"	v
+gamma_en	derenzo_phantom/Geant4-temp/derenzo_log.py	/^    gamma_en = 661.657$/;"	v
+gamma_en	derenzo_phantom/derenzo_log.py	/^    gamma_en = 661.657$/;"	v
 get_peak_fwhm	ihep_human_pet/read_hit.py	/^def get_peak_fwhm(se_hist_tof):$/;"	f
 get_time_diff_coincidences_multi_cpu	ihep_human_pet/read_hit.py	/^def get_time_diff_coincidences_multi_cpu(path_base_name,file_suffix='Coincidences.dat',file_number=5):$/;"	f
 get_time_diff_coincidences_single_cpu	ihep_human_pet/read_hit.py	/^def get_time_diff_coincidences_single_cpu(path_file_ascii,cut_count_threshold=10):$/;"	f
@@ -18,10 +56,20 @@ get_time_diff_hits	ihep_human_pet/read_hit.py	/^def get_time_diff_hits(path_file
 gray	img-operation/img_pixel_inverse.py	/^gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)$/;"	v
 green	ihep_human_pet/test.py	/^green = make_norm_dist(x, 50, 10)$/;"	v
 h	img-operation/img_pixel_inverse.py	/^h = img_shape[0]$/;"	v
+hpts	derenzo_phantom/Geant4-temp/derenzo_log.py	/^    hpts = np.array([(-R, 0), (R, 0)])$/;"	v
+hpts	derenzo_phantom/Geant4-temp/derenzo_log.py	/^    hpts = np.dot(hpts, rot)$/;"	v
+hpts	derenzo_phantom/derenzo_log.py	/^    hpts = np.array([(-R, 0), (R, 0)])$/;"	v
+hpts	derenzo_phantom/derenzo_log.py	/^    hpts = np.dot(hpts, rot)$/;"	v
 img	img-operation/img_pixel_inverse.py	/^img = cv2.imread('\/home\/mabo\/Pictures\/my-pic.png', 1)$/;"	v
 img_shape	img-operation/img_pixel_inverse.py	/^img_shape = img.shape  # 图像大小(565, 650, 3)$/;"	v
+label	derenzo_phantom/Geant4-temp/phantom.py	/^    def label(self):$/;"	m	class:DerenzoSection
+label	derenzo_phantom/phantom.py	/^    def label(self):$/;"	m	class:DerenzoSection
 list_time_diff	ihep_human_pet/backup/read_ascii_file.py	/^    list_time_diff = []$/;"	v
 list_time_diff	ihep_human_pet/read_ascii_file.py	/^    list_time_diff = []$/;"	v
+locs	derenzo_phantom/Geant4-temp/derenzo_log.py	/^            locs = np.array([np.dot(l, rot_mat) for l in locs])$/;"	v
+locs	derenzo_phantom/Geant4-temp/derenzo_log.py	/^            locs = place_wells_in_section(R, fs)$/;"	v
+locs	derenzo_phantom/derenzo_log.py	/^            locs = np.array([np.dot(l, rot_mat) for l in locs])$/;"	v
+locs	derenzo_phantom/derenzo_log.py	/^            locs = place_wells_in_section(R, fs)$/;"	v
 lor_to_sino	run-mcs/run-mcs.py	/^def lor_to_sino():$/;"	f
 main_coincidence_process_multi_cpu	ihep_human_pet/read_hit.py	/^def main_coincidence_process_multi_cpu():$/;"	f
 main_coincidence_process_single_cpu	ihep_human_pet/read_hit.py	/^def main_coincidence_process_single_cpu():$/;"	f
@@ -29,11 +77,31 @@ main_hit_process	ihep_human_pet/read_hit.py	/^def main_hit_process():$/;"	f
 make_norm_dist	ihep_human_pet/test.py	/^def make_norm_dist(x, mean, sd):$/;"	f
 matrix	deep_learning_study/python_machine_learning/numpy_1.py	/^matrix = numpy.array([[5,10,15],[20,25,30],[35,40,45]])$/;"	v
 merge_sion	run-mcs/run-mcs.py	/^def merge_sion():$/;"	f
+my_phantom	derenzo_phantom/Geant4-temp/phantom.py	/^    my_phantom = DerenzoPhantom(radius, well_seps)$/;"	v	class:DerenzoSection
+my_phantom	derenzo_phantom/phantom.py	/^    my_phantom = DerenzoPhantom(radius, well_seps, cyl_height=cyl_height)$/;"	v	class:DerenzoSection
+num_evs	derenzo_phantom/Geant4-temp/derenzo_log.py	/^    num_evs = 100$/;"	v
+num_evs	derenzo_phantom/derenzo_log.py	/^    num_evs = 100$/;"	v
+num_rows	derenzo_phantom/Geant4-temp/phantom.py	/^    def num_rows(self):$/;"	m	class:DerenzoSection
+num_rows	derenzo_phantom/phantom.py	/^    def num_rows(self):$/;"	m	class:DerenzoSection
+num_wells	derenzo_phantom/Geant4-temp/phantom.py	/^    def num_wells(self):$/;"	m	class:DerenzoPhantom
+num_wells	derenzo_phantom/Geant4-temp/phantom.py	/^    def num_wells(self):$/;"	m	class:DerenzoSection
+num_wells	derenzo_phantom/phantom.py	/^    def num_wells(self):$/;"	m	class:DerenzoPhantom
+num_wells	derenzo_phantom/phantom.py	/^    def num_wells(self):$/;"	m	class:DerenzoSection
 path_file_ascii	ihep_human_pet/backup/read_ascii_file.py	/^    path_file_ascii = '\/home\/mabo\/software\/data\/gate\/ihep_human_tof_pet_sz\/ihep_cluster\/cyl_sphere_activ_ration_1to4_tof_30ps\/human_szpet_cyl_to_sphere_1to4_source_tof_30ps_1Coincidences.dat'$/;"	v
 path_file_ascii	ihep_human_pet/read_ascii_file.py	/^    path_file_ascii = '\/home\/mabo\/software\/data\/gate\/ihep_human_tof_pet_sz\/ihep_cluster\/cyl_sphere_activ_ration_1to4_tof_30ps\/human_szpet_cyl_to_sphere_1to4_source_tof_30ps_1Coincidences.dat'$/;"	v
 path_file_ascii_hit	ihep_human_pet/backup/read_hit.py	/^    path_file_ascii_hit = '\/home\/mabo\/software\/src\/gate\/gate_macros\/ihep_human_tof_pet_sz\/results\/test_hits.dat'$/;"	v
 path_file_ascii_saved	ihep_human_pet/backup/read_hit.py	/^    path_file_ascii_saved = '\/home\/mabo\/software\/src\/gate\/gate_macros\/ihep_human_tof_pet_sz\/results\/test_hits_true.dat'$/;"	v
 pink	ihep_human_pet/test.py	/^pink = make_norm_dist(x, 60, 10)$/;"	v
+place_wells_in_section	derenzo_phantom/Geant4-temp/derenzo_log.py	/^def place_wells_in_section(R, well_sep, section_offset=0.1):$/;"	f
+place_wells_in_section	derenzo_phantom/Geant4-temp/phantom.py	/^    def place_wells_in_section(self):$/;"	m	class:DerenzoSection
+place_wells_in_section	derenzo_phantom/derenzo_log.py	/^def place_wells_in_section(R, well_sep, section_offset=0.1):$/;"	f
+place_wells_in_section	derenzo_phantom/phantom.py	/^    def place_wells_in_section(self):$/;"	m	class:DerenzoSection
+plot_wells	derenzo_phantom/Geant4-temp/phantom.py	/^    def plot_wells(self, fig, ax):$/;"	m	class:DerenzoSection
+plot_wells	derenzo_phantom/phantom.py	/^    def plot_wells(self, fig, ax):$/;"	m	class:DerenzoSection
+r	derenzo_phantom/Geant4-temp/derenzo_log.py	/^            r = fs \/ 2.0$/;"	v
+r	derenzo_phantom/derenzo_log.py	/^            r = fs \/ 2.0$/;"	v
+radius	derenzo_phantom/Geant4-temp/phantom.py	/^    radius = 37.0$/;"	v	class:DerenzoSection
+radius	derenzo_phantom/phantom.py	/^    radius = 50.0$/;"	v	class:DerenzoSection
 read_ascii_file	ihep_human_pet/backup/read_ascii_file.py	/^def read_ascii_file(path_file_ascii, list_time_diff):$/;"	f
 read_ascii_file	ihep_human_pet/read_ascii_file.py	/^def read_ascii_file(path_file_ascii, list_time_diff):$/;"	f
 read_ascii_file_coin	ihep_human_pet/backup/read_hit.py	/^def read_ascii_file_coin(path_file_ascii, list_time_diff):$/;"	f
@@ -41,10 +109,31 @@ read_ascii_file_coin	ihep_human_pet/read_hit.py	/^def read_ascii_file_coin(path_
 read_ascii_file_hit	ihep_human_pet/backup/read_hit.py	/^def read_ascii_file_hit(path_file_ascii, path_saved_ascii):$/;"	f
 read_ascii_file_hit	ihep_human_pet/read_hit.py	/^def read_ascii_file_hit(path_file_ascii, path_saved_ascii):$/;"	f
 rename_file	change-batch-file-names/change_batch_file_names.py	/^def rename_file():$/;"	f
+rot	derenzo_phantom/Geant4-temp/derenzo_log.py	/^    rot = np.array([(np.cos(th), -1*np.sin(th)),$/;"	v
+rot	derenzo_phantom/derenzo_log.py	/^    rot = np.array([(np.cos(th), -1*np.sin(th)),$/;"	v
+rot_angle	derenzo_phantom/Geant4-temp/derenzo_log.py	/^    rot_angle = -(2*np.pi) \/ 6.                      # 6 60-degree sections$/;"	v
+rot_angle	derenzo_phantom/derenzo_log.py	/^    rot_angle = -(2*np.pi) \/ 6.                      # 6 60-degree sections$/;"	v
+rot_mat	derenzo_phantom/Geant4-temp/derenzo_log.py	/^            rot_mat = np.array([(np.cos(th), -1*np.sin(th)),$/;"	v
+rot_mat	derenzo_phantom/derenzo_log.py	/^            rot_mat = np.array([(np.cos(th), -1*np.sin(th)),$/;"	v
+row_height	derenzo_phantom/Geant4-temp/phantom.py	/^    def row_height(self):$/;"	m	class:DerenzoSection
+row_height	derenzo_phantom/phantom.py	/^    def row_height(self):$/;"	m	class:DerenzoSection
 run_mcs_python	run-mcs/run-mcs.py	/^def run_mcs_python():$/;"	f
+show	derenzo_phantom/Geant4-temp/phantom.py	/^    def show(self):$/;"	m	class:DerenzoPhantom
+show	derenzo_phantom/phantom.py	/^    def show(self):$/;"	m	class:DerenzoPhantom
+source_name	derenzo_phantom/phantom.py	/^    source_name = 'derenzo'$/;"	v	class:DerenzoSection
 spline	ihep_human_pet/test.py	/^spline = UnivariateSpline(x, blue-np.max(blue)\/2, s=0)$/;"	v
 str_replace_sym	change-batch-file-names/change_batch_file_names.py	/^def str_replace_sym(old_string,old_sym,new_sym):$/;"	f
+th	derenzo_phantom/Geant4-temp/derenzo_log.py	/^            th = i * rot_angle$/;"	v
+th	derenzo_phantom/Geant4-temp/derenzo_log.py	/^    th = -60. * (np.pi\/180)$/;"	v
+th	derenzo_phantom/derenzo_log.py	/^            th = i * rot_angle$/;"	v
+th	derenzo_phantom/derenzo_log.py	/^    th = -60. * (np.pi\/180)$/;"	v
+total_area	derenzo_phantom/Geant4-temp/phantom.py	/^    def total_area(self):$/;"	m	class:DerenzoSection
+total_area	derenzo_phantom/phantom.py	/^    def total_area(self):$/;"	m	class:DerenzoSection
 vector	deep_learning_study/python_machine_learning/numpy_1.py	/^vector = numpy.array([5,10,15,20])$/;"	v
 w	img-operation/img_pixel_inverse.py	/^w = img_shape[1]$/;"	v
+well_area	derenzo_phantom/Geant4-temp/phantom.py	/^    def well_area(self):$/;"	m	class:DerenzoSection
+well_area	derenzo_phantom/phantom.py	/^    def well_area(self):$/;"	m	class:DerenzoSection
+well_seps	derenzo_phantom/Geant4-temp/phantom.py	/^    well_seps = (8.0, 6.0, 5.0, 4.0, 3.0, 2.0)$/;"	v	class:DerenzoSection
+well_seps	derenzo_phantom/phantom.py	/^    well_seps = (10.0, 8.0, 6.0, 4.0, 2.0, 1.0)$/;"	v	class:DerenzoSection
 world_alcohol	deep_learning_study/python_machine_learning/numpy_1.py	/^world_alcohol = numpy.genfromtxt(".\/numpy_docs\/world_alcohol.txt",delimiter=",", dtype=str)$/;"	v
 x	ihep_human_pet/test.py	/^x = np.linspace(10, 110, 1000)$/;"	v
